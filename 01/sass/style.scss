@@ -1,0 +1,324 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+html, button, input {
+    font-family: 'Montserrat';;
+}
+
+body {
+    height: 100vh;
+}
+
+.wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    background: #000;
+    color: #fff;
+
+    &__desktop {
+        display: none;
+    }
+
+    &__mobile {
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    &__logo, &__form, &__hamburger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__logo {
+        flex-basis: 65%;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__form {
+        flex-basis: 5%;
+    }
+
+    &__search {
+        // display: none;
+        position: absolute;
+        bottom: -6rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 2rem;
+        cursor: pointer;
+        transition: transform .3s;
+        transform: translateY(-100%);
+        z-index: -1;
+
+        &--active {
+            transform: translateY(0)
+        }
+
+        &-btn {
+            display: inline;
+            font-size: 2rem;
+        }
+    }
+
+    &__burger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 15%;
+        height: 6rem;
+        cursor: pointer;
+
+        &-buttons {
+            position: relative;
+            width: 70%;
+            height: .2rem;
+            background: #fff;
+
+            &::after, &::before {
+                position: absolute;
+                content: '';
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+            }
+
+            &::after {
+                top: 1rem;
+            }
+
+            &::before {
+                bottom: 1rem;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: auto;
+        width: 70%;
+        background: #2e2e2e;
+        list-style: none;
+        transform: translateX(100%);
+        transition: transform .3s;
+
+        &--active {
+            transform: translateX(0);
+            z-index: 1;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: .6rem 1.6rem;
+    }
+
+    &__sell {
+        display: inline-flex;
+        align-items: center;
+        color: #fff;
+        background: transparent;
+        border: 1px solid #20acff;
+        padding: .6rem 3rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &__font {
+        color: #20acff;
+        font-size: 2.4rem;
+        margin-right: 1rem;
+    }
+
+    &__close {
+        font-size: 3rem;
+        color: #fff;
+        cursor: pointer;
+        padding: .5rem;
+    }
+
+    &__icon {
+        font-size: 1.6rem;
+        width: 2rem;
+        height: 2rem;
+        color: #20acff;
+        margin-right: 1.6rem;
+    }
+
+    &__elements {
+        width: 100%;
+        padding: 1.2rem 2rem;
+
+        &--logout {
+            width: 70%;
+            text-align: center;
+            border-top: 1px solid rgb(100, 100, 100);
+            margin: 1rem auto;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        &-link {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-decoration: none;
+
+            span {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 2rem;
+                height: 2rem;
+                font-size: 1rem;
+                background: #20acff;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+    .wrapper {
+        max-width: 1200px;
+    }
+
+    .nav {
+        &__desktop {
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: 1fr;
+            padding: 1rem 2rem;
+        }
+
+        &__mobile {
+            display: none;
+        }
+
+        &__logo {
+            grid-column: 1/5;
+            grid-row: 1/2;
+        }
+
+        &__form {
+            grid-column: 6/13;
+            grid-row: 1/2;
+        }
+
+        &__input {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 5px 0 0 5px;
+            border: none;
+
+            &--search {
+                width: 35%;
+                font-family: FontAwesome, 'Montserrat';
+                border-radius: 0 5px 5px 0;
+                color: #fff;
+                background: #f90f17;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+        }
+
+        &__subcats {
+            grid-column: 13/17;
+            cursor: pointer;
+
+            &-title {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+        }
+
+        &__sell {
+            grid-column: 18/19;
+            font-size: 1rem;
+            padding: .6rem 1rem;
+
+            i {
+                font-size: 2rem;
+                color: #20acff;
+                margin-right: 1rem;
+            }
+        }
+
+        &__login {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background: #2e2e2e;
+            padding: 1rem;
+            cursor: pointer;
+
+            &-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.6rem;
+                width: 4rem;
+                height: 4rem;
+                color: #c2c2c2;
+                background: #888888;
+                border-radius: 50%;
+                margin-right: .5rem;
+            }
+        }
+
+        &__list {
+            top: 100%;
+            width: 30%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        &__subcats {
+            grid-column: 13/16;
+        }
+
+        &__list {
+            width: 20%;
+        }
+    }
+}

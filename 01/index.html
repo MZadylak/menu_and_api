@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izimoto</title>
+    <script src="https://kit.fontawesome.com/3dee0e509d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./sass/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav nav__desktop">
+            <a href="#" class="nav__logo"><img class="nav__image" src="./img/logo.png" alt="izimoto"></a>
+            <form class="nav__form">
+                <input type="text" placeholder="Wpisz nazwę części" class="nav__input">
+                <input type="submit" value="&#xf002; szukaj" class="nav__input nav__input--search">
+            </form>
+            <div class="nav__subcats">
+                <p class="nav__subcats-title">Przeglądaj kategorie <i class="fas fa-chevron-down nav__arrow"></i></p>
+            </div>
+            <!-- <div class="nav__account"> -->
+            <button class="nav__sell"><i class="far fa-handshake"></i>Sprzedaj</button>
+            <!-- </div> -->
+            <div class="nav__login">
+                <i class="far fa-user nav__login-icon"></i>
+                <i class="fas fa-chevron-down nav__arrow"></i>
+            </div>
+            <ul class="nav__list">
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="far fa-user nav__icon"></i>Moje konto</a>
+                </li>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="fas fa-shopping-cart nav__icon"></i>Historia
+                        zakupów</a>
+                </li>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="fas fa-box-open nav__icon"></i>Moje oferty</a>
+                </li>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="far fa-comments nav__icon"></i>Komentarze
+                        <span>16</span></a>
+                </li>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="fas fa-cog nav__icon"></i>Zarządzanie kontem</a>
+                </li>
+                <li class="nav__elements nav__elements--logout">
+                    <a href="#" class="nav__elements-link"><i class="fas fa-power-off nav__icon"></i>Wyloguj</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="nav nav__mobile">
+            <a href="#" class="nav__logo"><img class="nav__image" src="./img/logo.png" alt="izimoto"></a>
+            <form class="nav__form">
+                <input type="text" placeholder="Wpisz nazwę części" class="nav__search">
+                <i class="fas fa-search-plus nav__search-btn"></i>
+                <!-- <input type="submit" value="szukaj" class="nav__search-input"> -->
+            </form>
+            <div class="nav__burger">
+                <div class="nav__burger-buttons">
+                </div>
+            </div>
+            <ul class="nav__list">
+                <div class="nav__header">
+                    <button class="nav__sell"><i class="far fa-handshake nav__font"></i>Sprzedaj</button>
+                    <!-- <span class="nav__close" onclick="">X</span> -->
+                    <i class="fas fa-times nav__close"></i>
+                </div>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="far fa-user nav__icon"></i>Moje konto</a>
+                </li>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="fas fa-shopping-cart nav__icon"></i>Historia
+                        zakupów</a>
+                </li>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="fas fa-box-open nav__icon"></i>Moje oferty</a>
+                </li>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="far fa-comments nav__icon"></i>Komentarze
+                        <span>16</span></a>
+                </li>
+                <li class="nav__elements">
+                    <a href="#" class="nav__elements-link"><i class="fas fa-cog nav__icon"></i>Zarządzanie kontem</a>
+                </li>
+                <li class="nav__elements nav__elements--logout">
+                    <a href="#" class="nav__elements-link"><i class="fas fa-power-off nav__icon"></i>Wyloguj</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
