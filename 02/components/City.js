@@ -18,11 +18,11 @@ const City = ({ name }) => {
 
     useEffect(() => {
         getData();
-        // const id = setInterval(() => {
-        //     setElements([]);
-        //     getData();
-        // }, 10000);
-        // return () => clearInterval(id);
+        const id = setInterval(() => {
+            setElements([]);
+            getData();
+        }, 10000);
+        return () => clearInterval(id);
     }, []);
     const list = [...elements].map((day, i) => <DayData key={ i } { ...day } />);
 
